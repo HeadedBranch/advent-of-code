@@ -1,2 +1,5 @@
 *input
 *test
+rust/**/target
+rust/**/Cargo.lock
+*.idea
