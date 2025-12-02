@@ -1,8 +1,8 @@
 #!/bin/bash
 set -u
 lang=$1
-year="20$2"
-day=$(printf %02d "$3")
+year=$2
+day=$3
 dir="$(pwd)/rust/template"
 cd "$lang/$year/$day" || exit
 if [ "$lang" = "rust" ]
