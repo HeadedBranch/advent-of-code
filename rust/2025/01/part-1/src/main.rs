@@ -16,7 +16,7 @@ fn main() {
         let _ = line.next_back();
         let increase = line.next() == Some(b'R');
         let mut delta: i32 = 0;
-        for x in line { delta *= 10; delta += x as i32 - 48 };
+        for x in line { delta *= 10; delta += i32::from(x) - 48 };
         if increase {
             position += delta
         } else {
