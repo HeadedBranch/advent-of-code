@@ -4,7 +4,7 @@ lang=$1
 year=$2
 day=$3
 
-if [ $# -eq 0 ]
+if [ $# -lt 3 ]
 then
 	echo lang:
 	read lang
