@@ -16,7 +16,7 @@ fi
 year="20$year"
 day=$(printf %02d $day)
 
-./download-puzzle.sh $lang $year $day
+./download-puzzle.sh $year $day
 
 ./setup-templates.sh $lang $year $day
 

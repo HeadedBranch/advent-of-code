@@ -11,7 +11,7 @@ fn main() {
         if let Ok(0) = len {
             break;
         }
-        let line = line.trim().bytes().map(|x| x - 48).collect::<Vec<u8>>();
+        let line = line.trim().bytes().map(|x| x - b'0').collect::<Vec<u8>>();
         let mut i = (1..=9).rev();
         let largest_pos = loop {
             let cmp_val = i.next().unwrap();
