@@ -20,7 +20,7 @@ fn main() {
         grid.push(line);
     };
     loop {
-        let mut repeated = false;
+        let mut repeat = false;
         let grid = new_grid.clone();
         for a in 0..grid.len() {
             for b in 0..grid[a].len() {
@@ -46,11 +46,11 @@ fn main() {
                 if adjacent_count < 4 {
                     result += 1;
                     new_grid[a as usize][b as usize] = false;
-                    repeated = true;
+                    repeat = true;
                 }
             }
         }
-        if !repeated {
+        if !repeat {
             break;
         }
     }

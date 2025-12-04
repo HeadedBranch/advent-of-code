@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -u
 year=$1
 day=$2

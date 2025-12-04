@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -u
 lang=$1
 year=$2
