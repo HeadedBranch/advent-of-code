@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 fn main() {
-    let file = File::open("../input").unwrap();
+    let file = File::open("../test").unwrap();
     let mut reader = BufReader::new(file);
     let mut invalid_ids: Vec<u64> = vec![];
     let mut input = String::new();
