@@ -16,10 +16,8 @@ fn main() {
         let increase = line.next() == Some(b'R');
         let mut delta: i32 = 0;
         for x in line { delta *= 10; delta += i32::from(x) - 48 };
-        if delta >= 100 {
-            count += delta / 100;
-            delta %= 100;
-        }
+        count += delta / 100;
+        delta %= 100;
         if delta == 0 {
             continue;
         }
