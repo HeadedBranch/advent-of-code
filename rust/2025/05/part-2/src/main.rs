@@ -17,11 +17,14 @@ fn main() {
         ranges.push((range_start, range_end));
     }
     let mut result = 0;
-    let mut ranges = loop {
+    let mut count = 0;
+    let ranges = loop {
         let mut change = false;
         let mut checked_ranges: Vec<(u64, u64)> = Vec::new();
         'a: for a in &ranges {
             for b in &mut checked_ranges {
+                count += 1;
+                println!("{:?}{:?}{}",a,b,count);
                 if is_inside(a.0, b) && is_inside(a.1, b) {
                     // skip if range is already covered
                     continue 'a;
@@ -50,9 +53,7 @@ fn main() {
         }
         ranges = checked_ranges;
     };
-    ranges.sort();
     for i in &ranges {
-        println!("{i:?}");
         result += (i.0..=i.1).count();
     }
     println!("{result}");
